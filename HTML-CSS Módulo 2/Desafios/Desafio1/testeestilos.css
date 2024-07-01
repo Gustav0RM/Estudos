@@ -1,0 +1,64 @@
+@charset "UTF-8";
+body{
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+header{
+    text-align: center;
+    background-color: rgb(147, 175, 227);
+    padding: 10px;
+    margin: 10px;   
+}
+main{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 10px;
+}
+article{
+    background-color: lightgrey;
+    padding: 5px;
+}
+article > aside{
+    background-color: grey;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    margin: 0px;
+}
+nav{
+    background-color: cornflowerblue;
+    padding: 3px;
+}
+nav > ul> li{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+nav > ul > li > a{
+    padding: 20px 30px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav> ul> li> a:hover{
+    background-color: rgb(56, 85, 139);
+}
+
+/* CONFIGURAÇÕES DO SUBMENU*/
+nav .submenu {
+    display: none;
+    position: absolute;
+    top: 180%;
+    background-color:rgb(147, 175, 227);
+    padding: 0px 30px 20px 30px;
+}
+
+/*EXIBIR SUBMENU NO HOVER*/
+nav li:hover .submenu {
+    display: block;
+}
+

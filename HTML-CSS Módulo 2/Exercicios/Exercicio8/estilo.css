@@ -1,0 +1,52 @@
+@charset "UTF-8";
+h1{
+    height: 300px;
+    width: 300px;
+    background-color: lightgray;
+    margin: auto;
+
+    /*-----------------------------------------------
+    border-width: 10px;
+    border-style: solid;
+    border-color: aqua;
+    SIMPLIFICADO COM SHORT HAND ABAIXO \/
+    ------------------------------------------------*/
+
+    border: 10px solid aqua;
+
+    /*-----------------------------------------------
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+        SIMPLIFICADO COM SHORT HAND ABAIXO \/
+    ------------------------------------------------*/
+
+    padding: 10px;
+
+    /*----------------------------------------------
+    outline-width: 5px;
+    outline-style: dashed;
+    outline-color: coral;
+        SIMPLIFICADO COM SHORT HAND ABAIXO \/
+    -----------------------------------------------*/
+
+    outline:5px dashed coral ;
+}
+
+
+.linkeditado{
+    background-color: lightgray;
+    border: 5px solid aqua;
+    padding: 7px 7px 20px 20px;
+
+}
+.editada{
+    background-color: lightgray;
+    border: solid aqua;
+    margin-top: 50px;
+}
+#links{
+    text-align: center;
+    word-spacing: 5px;
+}

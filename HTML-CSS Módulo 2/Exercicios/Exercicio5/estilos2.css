@@ -1,0 +1,27 @@
+@charset "UTF-8";
+body{
+    background-image: linear-gradient(to right,  #F2D0A7, #F29F80, #F2D0A7);
+}
+#principal{
+    color: #171559;
+    text-align: center;
+    background-image: radial-gradient(ellipse, #F29F80, #F2D0A7);
+}
+#links{
+    text-align: center;
+    word-spacing: 5px;
+}
+.basico{
+    color: rgb(51, 123, 51);
+}
+.intermediario{
+    color: rgb(193, 176, 20);
+}
+.avançado{
+    color: rgb(177, 84, 84);
+}
+.destaque{
+    background-color: #171559;
+    text-align: center;
+    color: #D94169;
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+body{
+    font-family: Arial, helvetica, sans-serif;
+    background-color: lightgrey;
+}
+.link1{
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+.link2{
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+.link3{
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+.link1:hover{
+    color: red;
+    text-decoration: underline;
+}
+.link2:hover{
+    color: blueviolet;
+    text-decoration: underline;
+}
+.link3:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+.link1::after{
+    content: ' ♪';
+    color: azure;
+}
+.link2::after{
+    content: ' ☢';
+    color: azure;
+}
+.link3::after{
+    content: '✎';
+    color: azure;
+}
+a:hover::after{
+    color: black;
+}
+#links{
+    text-align: center;
+    word-spacing: 5px;
+}

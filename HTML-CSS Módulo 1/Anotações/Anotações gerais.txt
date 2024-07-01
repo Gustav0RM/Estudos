@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "pt-br">  LINGUAGEM DO SITE
+
+ <head>
+	<meta charset="UTF-8">   PADRAO DE DIGITAÇÃO
+
+	<meta name="viewport"content="width=device-width,initial-scale=1.0"> TAMANHO UTILIZADO PARA EXIBIÇÃO DA PAGINA
+
+	<title> NOME DA PAGINA </title> 
+
+	<link rel="shortcut icon" href="ctrl + espaço" type="image/x-icon"> PARA TROCAR O FAVICON
+	<link rel="stylesheet" href="index.html">  USADO PARA CARREGAR OS ESTILOS DE FONTE CSS
+
+	<style> 
+		Inserir styles na head do código para deixar mais organizado  
+		
+	</style>
+
+
+ </head>
+ <body>
+
+	<TEXTO>
+		<h1> TÍTULO PRINCIPAL </h1>
+		<h2> Titulo secundario <h2>
+		<h3> subtitulo do titulo secundario <h3>
+		<h4> aprofundamento do subtitulo <h4>
+		<h5> aprofundamento do h4 <h5>
+		<h6> aprofundamento do h5 <h6>
+		<p>PARÁGRAFOS,TEXTO, ETC</p>
+		<EM> para dar sentido de enfâse </EM>
+		<Strong> Para dar sentido de importância </strong>
+		<br> PARA QUEBRAR LINHAS
+		<hr> PARA CRIAR LINHAS HORIZONTAIS
+		&lt; para exibir < &gt; para exibir >
+		<pre><code> para exibir trechos de códigos </code></pre>
+		<q> para dar sentido a citações </q>
+	
+	</TEXTO>
+	
+	<ACESSÓRIOS>
+		&#x + Código para colocar um emoji
+
+	</ACESSÓRIOS>
+
+
+
+	<IMAGENS>
+		Para carregar uma imagem que está dentro da mesma pasta do seu arquivo, se usa :
+	 	<img src = "ctrl + espaço e seleciona a imagem"
+	  	alt = "descrição da imagem">
+		Para carregar uma imagem que está dentro de uma sub-pasta dentro da pasta do arquivo, se usa o mesmo comando buscando pelo ctrl + espaço.
+		E para carregar uma imagem que está em outro local da internet, basta copiar o link da foto e colar no src.
+
+	</IMAGENS>
+
+
+
+	<LINKS>
+		Para criar um link de um site externo basta utilizar a tag <a href="Inserir o link aqui" target="_blank" rel="external">Inserir aqui frase que deseja conter o link </a>
+
+		* target="_blank" serve para abrir o link em uma nova aba 
+		* rel="external" serve para indicar que o site que está no link não faz parte do site atual
+		* rel="next" serve para indicar que o link é para proxima parte do site atual
+		* rel="prev" serve para indicar que o link é para a parte anterior do site atual
+		* rel="author" serve para indicar um link para o site do autor do artigo atual
+		* rel="nofollow" serve para indicar que é um link para um site pago
+
+	</LINKS>
+
+
+
+	<MEDIA>
+	  *IMAGENS para adicionar imagens dinâmicas no seu site, imagens responsivas, é usada a tag <picture> e dentro dela uma   tag <img> para carregar uma imagem e a tag <sources> dentro, colocando fotos de tamanhos diferentes para adaptar ao site.
+		            **ORDEM DAS TAGS**
+		<picture>
+				<source>  IMG PEQUENA </source>
+				<source> IMG MEDIA  </source>
+				<img>  IMG GRANDE   <img>
+		</picture>
+
+
+	  *VIDEOS para adicionar um player de video do youtube é usada tag <iframe> com atributos src= link do youtube, title= nome do video, frameborder= borda do frame, allow= autorizar funcionalidades do player, allowfullscreen permitir tela cheia.
+
+	</MEDIA>
+
+
+
+
+
+
+ </body>
+</html>
+	

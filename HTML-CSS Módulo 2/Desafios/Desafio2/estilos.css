@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: "IDroid";
+    src: url("../../Fonte/IDroid.eot") format("eot"), url("../../Fonte/IDroid.woff") format("woff"), url("../../Fonte/IDroid.ttf") format("truetype"), url("../../Fonte/IDroid.svg") format("svg");
+    font-weight: normal;
+}
+:root p{
+  padding: 10px 23px;
+  text-align: justify;
+  
+}
+
+header {
+    background-image: linear-gradient(to top, #197340, #34b16c, #51d188);
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    margin: 0px;
+    border: solid black 1px;
+    box-shadow: 0px 1px 5px black;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    max-width: 100%;
+}
+header h1{
+    letter-spacing: 3px;
+}
+header h2{
+    font-size: large;
+    letter-spacing: 1px;
+    font-weight: lighter;
+
+}
+header nav{
+    text-align: start;
+    letter-spacing: 1px;
+}
+
+nav a {
+    padding: 0px 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
+nav a:hover {
+    background-color: #114c2b;
+}
+
+#Titulo {
+    font-size: large;
+    font-weight: bold;
+    color: #114c2b;
+    font: 35px 'IDroid';
+    margin: 0px 15px 15px 15px;
+    padding-top: 10px;
+
+}
+
+.Secundarios {
+    background-image: linear-gradient(to right, #aef2cbd7, #d4eee0c6, #f8f8f800);
+    font: 23px 'IDroid';
+    color: #114c2b;
+    margin: 15px;
+}
+em{
+    color: #197340;
+    font-weight: bold;
+    
+}
+
+body {
+    background-color: #bce2a5;
+    margin: 0px;
+}
+
+main {
+    font:bold 1em Arial, Helvetica, sans-serif;
+    background-color: white;
+    min-width: 300px;
+    max-width: 85%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 3px black;
+}
+
+/* PERSONALIZANDO link externo*/
+
+.linkext{
+    font-weight: bolder;
+    color: #197340;
+    text-decoration: none;
+}
+.linkext:after {
+    content:"🔗";
+}
+.linkext:hover{
+    text-decoration: underline;
+}
+
+
+main img {
+    width: 100%;
+    /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove espaçamento extra abaixo da imagem */
+    margin: 0px auto;
+    /* Centraliza horizontalmente a imagem */
+}
+
+.containervideo {
+    position: relative;
+    /*Define a posição do elemento como "relativa", o que permite posicionar os elementos filhos com base na posição atual deste elemento.*/
+    padding-bottom: 40%;
+    /* Proporção 16:9 */
+    padding-top: 30px;
+    background-color: #114c2b;
+}
+
+.containervideo iframe {
+    position: absolute;
+    /*permite posicionar o iframe com base nas propriedades top, left, right e bottom em relação ao seu ancestral mais próximo*/
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    /*define a altura como 100% do elemento pai*/
+    width: 80%;
+    /*define a largura como 80% do elemento pai*/
+    margin: auto;
+    /*centralizar o iframe*/
+}
+.conteudo{
+    width: 90%;
+    margin: auto;
+    background-color: #b4e4c9d0;
+    border-radius: 8px;
+}
+.conteudo h1{
+    text-align: center;
+    color: white;
+    background-color: #197340;
+    padding: 15px 0px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin: 40px 0px 0px 0px;
+
+}
+.conteudo p{
+    padding: 15px 20px;
+    margin: 0px;
+}
+.colunalista{
+    columns: 2; /* divide a lista em 2 colunas */
+    list-style-type: none; /* remove os marcadores de lista */
+    padding: 5px 20px;
+    margin: 0px;
+}
+.colunalista li {
+    margin-bottom: 10px; /* espaçamento entre os itens */
+}
+li abbr{
+    text-decoration: underline;
+}
+.colunalista li:before{
+    content:'✔ ';
+}
+.pfinal{
+    text-align: center;
+    margin-bottom: 0px;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 7px 0px;
+    margin: 0px;
+    max-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+footer::after{
+    content: '✍';
+}

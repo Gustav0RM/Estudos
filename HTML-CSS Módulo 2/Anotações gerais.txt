@@ -1,0 +1,185 @@
+<Modulo1>
+	<!DOCTYPE html>
+	<html lang = "pt-br">  LINGUAGEM DO SITE
+	
+	 <head>
+		<meta charset="UTF-8">   PADRAO DE DIGITAÇÃO
+	
+		<meta name="viewport"content="width=device-width,initial-scale=1.0"> TAMANHO UTILIZADO PARA EXIBIÇÃO DA PAGINA
+	
+		<title> NOME DA PAGINA </title>
+	
+		<link rel="shortcut icon" href="ctrl + espaço" type="image/x-icon"> PARA TROCAR O FAVICON
+		<link rel="stylesheet" href="index.html">  USADO PARA CARREGAR OS ESTILOS DE FONTE CSS
+	
+		<style>
+			Inserir styles na head do código para deixar mais organizado
+	
+		</style>
+	
+	
+	 </head>
+	 <body>
+	
+		<TEXTO>
+			<h1> TÍTULO PRINCIPAL </h1>
+			<h2> Titulo secundario <h2>
+			<h3> subtitulo do titulo secundario <h3>
+			<h4> aprofundamento do subtitulo <h4>
+			<h5> aprofundamento do h4 <h5>
+			<h6> aprofundamento do h5 <h6>
+			<p>PARÁGRAFOS,TEXTO, ETC</p>
+			<EM> para dar sentido de enfâse </EM>
+			<Strong> Para dar sentido de importância </strong>
+			<br> PARA QUEBRAR LINHAS
+			<hr> PARA CRIAR LINHAS HORIZONTAIS
+			&lt; para exibir < &gt; para exibir >
+			<pre><code> para exibir trechos de códigos </code></pre>
+			<q> para dar sentido a citações </q>
+	
+		</TEXTO>
+	
+		<ACESSÓRIOS>
+			&#x + Código para colocar um emoji
+	
+		</ACESSÓRIOS>
+	
+	
+	
+		<IMAGENS>
+			Para carregar uma imagem que está dentro da mesma pasta do seu arquivo, se usa :
+			<img src = "ctrl + espaço e seleciona a imagem"
+			alt = "descrição da imagem">
+			Para carregar uma imagem que está dentro de uma sub-pasta dentro da pasta do arquivo, se usa o mesmo comando buscando pelo ctrl + espaço.
+			E para carregar uma imagem que está em outro local da internet, basta copiar o link da foto e colar no src.
+	
+		</IMAGENS>
+	
+	
+	
+		<LINKS>
+			Para criar um link de um site externo basta utilizar a tag <a href="Inserir o link aqui" target="_blank" rel="external">Inserir aqui frase que deseja conter o link </a>
+	
+			* target="_blank" serve para abrir o link em uma nova aba
+			* rel="external" serve para indicar que o site que está no link não faz parte do site atual
+			* rel="next" serve para indicar que o link é para proxima parte do site atual
+			* rel="prev" serve para indicar que o link é para a parte anterior do site atual
+			* rel="author" serve para indicar um link para o site do autor do artigo atual
+			* rel="nofollow" serve para indicar que é um link para um site pago
+	
+		</LINKS>
+	
+	
+	
+		<MEDIA>
+		  *IMAGENS para adicionar imagens dinâmicas no seu site, imagens responsivas, é usada a tag <picture> e dentro dela uma   tag <img> para carregar uma imagem e a tag <sources> dentro, colocando fotos de tamanhos diferentes para adaptar ao site.
+						**ORDEM DAS TAGS**
+			<picture>
+					<source>  IMG PEQUENA </source>
+					<source> IMG MEDIA  </source>
+					<img>  IMG GRANDE   <img>
+			</picture>
+	
+	
+		  *VIDEOS para adicionar um player de video do youtube é usada tag <iframe> com atributos src= link do youtube, title= nome do video, frameborder= borda do frame, allow= autorizar funcionalidades do player, allowfullscreen permitir tela cheia.
+	    </MEDIA>
+</Modulo1>
+
+
+<Modulo2>
+
+			<CSS>
+			@charset "UTF-8" METODO DE DIGITAÇÃO
+			
+					MÉTODOS PARA USAR CONFIGURAÇÕES GERAIS DE ESTILO
+				
+				background-image: linear-gradient(to right, cor1,cor2);  COMANDO PARA CRIAR DEGRADÊ
+				height: 		600px; ALTURA
+				width:          600px; LARGURA
+				padding:        10px; DISTANCIA ENTRE UM ELEMENTO E A BORDA
+				margin:         auto; CENTRALIZAR INDEPENDENTE DO TAMANHO DA PAGINA
+				border-radius:  10px; ARREDONDAR AS BORDAS
+				box-shadow:     2px 5px 15px + COR; SOMBREAR A BOX  - parâmetros: tam. sombra p/ lado, tam. sombra p/ baixo, espalhamento, cor;
+				text-shadow:    2px 2px 1px + COR; SOMBREAR O TEXTO  - parâmetros: tam. sombra p/ lado, tam. sombra p/ baixo, espalhamento, cor;
+				font-size:      1em ; ALTERAR O TAMANHO DA FONTE. É RECOMENDADO USAR "EM"
+				font-weight:    ALTERAR O PESO DA FONTE
+				font-style:     ALTERAR O ESTILO DA FONTE
+				text-indent:    30px; DEIXAR UM ESPAÇO EM BRANCO ANTES DO INÍCIO DO PARÁGRAFO
+				word-spacing:   5px; ESPAÇAMENTOE ENTRE PALAVRAS
+				letter-spacing: 5px; ESPAÇAMENTO ENTRE LETRAS
+
+				*SHORTHAND*:    COMANDO PARA ABREVIAR A MODIFICAÇÃO DA FONTE. AS CARACTERÍSTICAS PRECISAM SER INSERIDAS NA SEGUINTE ORDEM: font: |font-style| |font-weight| |font-size| |font-family             | 
+				            Ex: font: |italic    | |bolder     | |3em      | |'Work Sans', sans-serif;|
+
+				
+				/* SELETORES PERSONALIZADOS
+
+				#  = ID
+				.  = class 
+				:  = pseudo-class
+				:: = pseudo-element
+				>  = children
+
+				*/
+
+
+				SHORTHAND APLICADO EM CONFIGURAÇÕES DA CAIXA
+
+			Ex:
+				 /*-----------------------------------------------
+    				border-width: 10px;
+					border-style: solid;
+					border-color: aqua;
+			
+				SIMPLIFICADO COM SHORT HAND ABAIXO \/
+
+					border: 10px solid aqua;
+				------------------------------------------------*/
+
+			Ex2:
+				 /*----------------------------------------------
+					outline-width: 5px;
+					outline-style: dashed;
+					outline-color: coral;
+
+				SIMPLIFICADO COM SHORT HAND ABAIXO \/
+
+					 outline:5px dashed coral ;
+				-----------------------------------------------*/
+
+			Ex3:
+				/*-----------------------------------------------
+					padding-top: 10px;
+					padding-bottom: 10px;		
+					padding-left: 10px;
+					padding-right: 10px;
+													(Nesse caso como se tratam de medidas direcionais, será sempre no sentido horário, ou seja, top-right-bottom-left. No exemplo 3, como se tratam de medidas iguais para as 4 direções, pode ser simplificado informando somente uma vez).
+
+        		SIMPLIFICADO COM SHORT HAND ABAIXO \/
+
+					padding: 10px;
+    			------------------------------------------------*/
+			Ex4:
+				/*-----------------------------------------------
+					margin-top: 20px;
+					margin-bottom: 30px;		
+					margin-left: 40px;
+					margin-right: 50px;
+																		(Se os lados opostos tiverem medidas iguais, pode ser simplificado com ''margin: 20px 40px''.Dessa forma entende-se que o lado oposto terá a mesma medida.)
+				SIMPLIFICADO COM SHORT HAND ABAIXO \/
+
+					margin: 20px 50px 30px 40px
+				------------------------------------------------*/
+
+			</CSS>
+</Modulo2>
+
+
+
+
+
+
+
+ </body>
+</html>
+	

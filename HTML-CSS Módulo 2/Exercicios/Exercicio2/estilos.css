@@ -1,0 +1,9 @@
+@charset "UTF-8";
+body{
+    background-image: linear-gradient(to right, #6192b4, #00A7E1, #EDDEA4, #F7A072, #FF9B42);
+
+}
+p{
+    text-align: center;
+    word-spacing: 5px;
+}

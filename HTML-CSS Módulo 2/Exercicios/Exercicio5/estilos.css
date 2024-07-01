@@ -1,0 +1,14 @@
+@charset "UTF-8";
+body{
+    text-align: justify;
+    text-indent: 30px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+#links{
+    text-align: center;
+}
