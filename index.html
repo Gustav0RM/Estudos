@@ -3,32 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PAINEL</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../Estudos/HTML-CSS Módulo 1/Exercícios/Imagens/Programador 16x16.png" type="image/x-icon">
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(
+        -45deg,
+        #141e30,
+        #243b55,
+        #0f2027,
+        #203a43
+      );
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .card .list-group-item {
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      background-color: #f1f5f9;
+      font-weight: 500;
+      transition: all 0.25s ease;
+    }
+
+    .card .list-group-item:hover {
+      background-color: #243b55;
+      color: #fff;
+      transform: translateX(6px);
+    }
+
+    .card .list-group-item.active {
+      background-color: #141e30;
+      color: #fff;
+    }
+  </style>
+  <title>Estudos</title>
 </head>
 <body>
-  <H1>Início</H1>
-  <br>
+  <div class="container mt-5">
+    <div class="row justify-content-center g-4">
+      
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../Estudos/HTML-CSS Módulo 1/Exercícios/Imagens/ChatGPT Image Jan 16, 2026, 02_23_57 PM.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">HTML5 & CSS3</h5>
+            <div class="list-group">
+              <a href="../Estudos/HTML-CSS Módulo 1/painel_modulo_1.html" class="list-group-item list-group-item-action" aria-current="true">
+               Módulo 1
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">Módulo 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Módulo 3 </a>
+              <a href="#" class="list-group-item list-group-item-action">Módulo 4 </a>
+              <a href="#" class="list-group-item list-group-item-action">Módulo 5 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../Estudos/HTML-CSS Módulo 1/Exercícios/Imagens/5ef05947-beff-489b-92cd-e2b722ddee62.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Javascript</h5>
+             <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">Módulo 1
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Loading...</h5>
+            <!-- Botões
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">Módulo 1
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Bootstrap JS (inclui Popper) -->
+<script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
-  <h2>Cursos</h2>
-  <table>
-    <thead>
-      <tr>
-        <td>HTML-CSS</td>
-        <td>Javascript</td>
-        <td>PHP</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <a href="../Estudos/HTML-CSS Módulo 1/painel_modulo_1.html">Módulo 1</a>
-          <a href="">Módulo 2</a>
-          <a href="">Módulo 3</a>
-        </td>
-        <td>...</td>
-        <td>...</td>
-      </tr>
-    </tbody>
-  </table>
 </body>
 </html>
