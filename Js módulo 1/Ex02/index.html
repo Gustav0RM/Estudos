@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex02</title>
+</head>
+<body>
+  <script>
+    function fnc_formatar_nome(nome)
+      {
+      return nome[0].toUpperCase() + nome.slice(1).toLowerCase();
+      // variavel[0] seleciona a primeira letra da string, toUpperCase() torna maiúsculo e variavel.slice(1) pega o resto dos caracteres a partir da posição 1 e  toLowerCase() torna minúscula
+      }
+    function fnc_formatar_altura(altura)
+      {
+      var altura = parseFloat(altura.replace(',','.')); // replace para trocar a virgula inserida pelo usuário para ponto, pois javascript nao entende , como separador decimal
+      return altura.toFixed(2).replace('.',','); //toFixed determina quantas casas depois da vírgula e replace troca ponto por vírgula, para exibição
+      }
+    function fnc_formatar_monetario(valor)
+      {
+      var valor = parseFloat(valor.replace(',','.'));
+      return valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}); 
+      }
+
+    var nome = prompt('Insira seu nome');
+    var altura = prompt('Insira sua altura');
+    var valor = prompt('Insira o valor que tem no banco');
+    
+
+    document.write(`Nome formatado: ${fnc_formatar_nome(nome)} <br>`);
+    document.write(`Seu nome tem: ${nome.length} letras<br>`);
+    document.write(`Altura formatada: ${fnc_formatar_altura(altura)}<br>`);
+    document.write(`Conta bancária: ${fnc_formatar_monetario(valor)}`);
+  </script>
+  
+</body>
+</html>

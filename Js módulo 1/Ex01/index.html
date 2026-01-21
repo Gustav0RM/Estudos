@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex01</title>
+</head>
+<body>
+  <script>
+    var resposta = String(prompt('Está gostando de JS?'));
+    var nome = String(prompt('Qual seu nome?'));
+    alert('Resposta: ' + resposta + '\n' +
+      'Nome: ' +nome 
+    );
+    var numero1 = Number(prompt('Insira um número'));
+    var numero2 = Number(prompt('Insira outro número'));
+    alert('Soma dos dois números inseridos é: ' + (numero1 + numero2));
+    alert(`Soma dos dois números inseridos é > ${numero1 + numero2}`); //placeholder,usa crase `` e não necessita "+" para concatenação
+
+    // "+" em javascript serve para concatenação e soma, porém, só soma se as variáveis forem convertidas para int ou float(number)
+    //tipos de conversão 
+    // para number "Number(variavel)"
+    // para string > "String(variavel)"
+  </script>
+
+  
+</body>
+</html>
