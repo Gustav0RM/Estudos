@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos DOM</title>
+  <style>
+    div#area{
+      font: normal 20pt arial;
+      background-color:blanchedalmond;
+      color: black;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="area">Interaja</div>
+
+  <script>
+    //uso de eventListener, que no caso substitui a necessidade de declarar o evento no html, como por exemplo ''onclick'' , ''onchange''
+    var div = document.getElementById('area');
+    div.addEventListener('mouseenter' , fnc_EventoUm);
+    div.addEventListener('mouseleave' , fnc_EventoDois);
+
+    function fnc_EventoUm()
+      {
+      div.innerHTML = 'OnMouseEnter';
+      }
+    function fnc_EventoDois()
+      {
+      div.innerHTML = 'OnMouseLeave';  
+      }
+
+  </script>
+  
+</body>
+</html>

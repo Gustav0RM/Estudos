@@ -14,7 +14,7 @@
       }
     function fnc_formatar_altura(altura)
       {
-      var altura = parseFloat(altura.replace(',','.')); // replace para trocar a virgula inserida pelo usuário para ponto, pois javascript nao entende , como separador decimal
+      var altura = parseFloat(altura.replace(',','.')); // replace para trocar a virgula inserida pelo usuário para ponto, pois javascript nao entende virgula como separador decimal
       return altura.toFixed(2).replace('.',','); //toFixed determina quantas casas depois da vírgula e replace troca ponto por vírgula, para exibição
       }
     function fnc_formatar_monetario(valor)
