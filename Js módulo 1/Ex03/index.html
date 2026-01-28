@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex03</title>
+</head>
+<body>
+  <h1 hidden id="inicioH1">Formas de selecionar elementos</h1>
+  <p hidden>parágrafo1</p>
+  <p hidden>parágrafo2</p>
+
+  <div hidden>div 1</div>
+  <script>
+    //getElementById seleciona elemento pelo ID
+    var h1 = document.getElementById('inicioH1');
+
+    //alteração do conteúdo do elemento capturado
+    h1.innerHTML = '<h1>Formas de selecionar elementos</h1>';
+
+    //getElementsByTagName, seleciona os elementos que tem a mesma tag. Neste caso é utilizado [] para capturar o elemento desejado pela ordem 
+    var paragrafo1 = document.getElementsByTagName('p')[0];
+    var paragrafo2 = document.getElementsByTagName('p')[1];
+
+    //alteração do que está dentro do elemento capturado
+    paragrafo1.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consequuntur, amet quis doloribus officiis assumenda eum facere totam ducimus blanditiis earum explicabo, deserunt nulla voluptatibus commodi. Eos qui ipsum saepe!<br>';
+    paragrafo2.innerHTML = 'asdadasdasdadasdsadasdsadasdasdasdadasdasdadsada<br>';
+
+
+    document.write(`${h1.innerHTML}<br>`);
+    document.write(`${paragrafo1.innerHTML}<br> ${paragrafo2.innerHTML}<br>`);
+
+
+
+    // document.write(document.URL); mostrar URL 
+  </script>
+  
+</body>
+</html>
