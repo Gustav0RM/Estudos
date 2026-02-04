@@ -20,19 +20,21 @@
   <div id="area">Interaja</div>
 
   <script>
-    //uso de eventListener, que no caso substitui a necessidade de declarar o evento no html, como por exemplo ''onclick'' , ''onchange''
     var div = document.getElementById('area');
-    div.addEventListener('mouseenter' , fnc_EventoUm);
-    div.addEventListener('mouseleave' , fnc_EventoDois);
-
     function fnc_EventoUm()
       {
-      div.innerHTML = 'OnMouseEnter';
+      div.innerHTML = 'Dentro';
       }
     function fnc_EventoDois()
       {
-      div.innerHTML = 'OnMouseLeave';  
+      div.innerHTML = 'Fora';  
       }
+      
+    //uso de eventListener, que no caso substitui a necessidade de declarar o evento no html, como por exemplo ''onclick'' , ''onchange'' 
+    div.addEventListener('mouseenter' , fnc_EventoUm);
+    div.addEventListener('mouseleave' , fnc_EventoDois);
+
+
 
   </script>
   

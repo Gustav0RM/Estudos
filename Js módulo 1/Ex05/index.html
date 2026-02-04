@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EX05</title>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  
+  <div class="container" style="display: inline;">
+    <input type="text" name="primeiro_numero" id="primeiro_numero">
+    <input type="text" name="segundo_numero" id="segundo_numero">
+  </div>
+
+  <select name="select_operacao" id="select_operacao">
+    <option value="1">Soma</option>
+    <option value="2">Subtração</option>
+    <option value="3">Divisão</option>
+    <option value="4">Multiplicação</option>
+  </select>
+
+  <input id="botao" type="button" value="Calcular">
+
+  <br><br>
+  <p id="resultado"></p>
+
+
+
+  <script>
+
+    function RealizarCalculo()
+      {
+      var select = document.getElementById('select_operacao');
+      var option = document.getElementById('select_operacao').value;
+      var botao = document.getElementById('botao');
+      var primeiro_numero = Number(document.getElementById('primeiro_numero').value);
+      var segundo_numero = Number(document.getElementById('segundo_numero').value);
+      var resultado = document.getElementById('resultado');
+      
+      switch (option) 
+        {
+        case '1' : resultado.innerHTML = `Resultado = ${primeiro_numero + segundo_numero}`; break;
+        case '2' : resultado.innerHTML = `Resultado = ${primeiro_numero - segundo_numero}`; break;
+        case '3' : resultado.innerHTML = `Resultado = ${primeiro_numero / segundo_numero}`; break;
+        case '4' : resultado.innerHTML = `Resultado = ${primeiro_numero * segundo_numero}`; break;
+        }
+      }
+    function FormatarEntrada()
+      {
+      var primeiro_numero = document.getElementById('primeiro_numero');
+      var segundo_numero = document.getElementById('segundo_numero');
+
+      primeiro_numero.value = primeiro_numero.value.replace(/\D/g, "");
+      segundo_numero.value = segundo_numero.value.replace(/\D/g, "");
+
+      }
+      botao.addEventListener('click', RealizarCalculo);
+      primeiro_numero.addEventListener('input', FormatarEntrada);
+      segundo_numero.addEventListener('input', FormatarEntrada);
+  </script>
+</body>
+</html>
