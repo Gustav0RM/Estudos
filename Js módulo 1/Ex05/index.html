@@ -24,7 +24,9 @@
   <input id="botaoLimpar" type="button" value="Limpar">
 
   <br><br>
-  <p id="resultado"></p>
+  <label id="label" style="display: none;">Resultado</label>
+  <input type="text" name="resultado" id="resultado" readonly style="display: none;">
+  <input type="text" name="resultado2" id="resultado2" readonly style="display: none;">
 
 <!-- 
                             !!PARA LEMBRAR!!
@@ -42,13 +44,33 @@
       var primeiro_numero = Number(document.getElementById('primeiro_numero').value);
       var segundo_numero = Number(document.getElementById('segundo_numero').value);
       var resultado = document.getElementById('resultado');
+      var resultado2 = document.getElementById('resultado2');
+      var label = document.getElementById('label');
+      resultado.style.display = '';
+      resultado2.style.display = '';
+      label.style.display = '';
       
       switch (option) 
         {
-        case '1' : resultado.innerHTML = `Resultado = ${primeiro_numero + segundo_numero}`; break;
-        case '2' : resultado.innerHTML = `Resultado = ${primeiro_numero - segundo_numero}`; break;
-        case '3' : resultado.innerHTML = `Resultado = ${primeiro_numero / segundo_numero}`; break;
-        case '4' : resultado.innerHTML = `Resultado = ${primeiro_numero * segundo_numero}`; break;
+        case '1' : resultado.value = `${primeiro_numero + segundo_numero}`; break;
+        case '2' : resultado.value = `${primeiro_numero - segundo_numero}`; break;
+        case '3' : resultado.value = `${primeiro_numero / segundo_numero}`; break;
+        case '4' : resultado.value = `${primeiro_numero * segundo_numero}`; break;
+        }
+      }
+
+    function ParOuImpar()
+      {
+      var resultado = Number(document.getElementById('resultado').value);
+      var resultado2 = document.getElementById('resultado2');
+
+      if ((resultado % 2) == 0)
+        {
+        resultado2.value = 'Par';
+        }
+      else
+        {
+        resultado2.value = 'Impar';  
         }
       }
 
@@ -57,14 +79,19 @@
       var primeiro_numero = document.getElementById('primeiro_numero');
       var segundo_numero = document.getElementById('segundo_numero');
       var resultado = document.getElementById('resultado');
+      var label = document.getElementById('label');
 
       primeiro_numero.value = '';  
       segundo_numero.value = '';
-      resultado.innerHTML = '';
+      resultado.value = '';
+      resultado.style.display = 'none';
+      resultado2.style.display = 'none';
+      label.style.display = 'none';
       }
 
       botao.addEventListener('click', RealizarCalculo);
       botaoLimpar.addEventListener('click', LimparResultado);
+      botao.addEventListener('click', ParOuImpar);
   </script>
 </body>
 </html>
