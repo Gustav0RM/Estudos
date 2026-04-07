@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EX05</title>
 </head>
-<body>
+<body onload="SinalOperacao()">
   <h1>Calculadora</h1>
   
-  <div class="container" style="display: inline;">
+  <div class="container" style="margin:10px; display: inline;">
     <input type="number" name="primeiro_numero" id="primeiro_numero">
+    <span id="enunciado2"></span>
     <input type="number" name="segundo_numero" id="segundo_numero">
   </div>
 
-  <select name="select_operacao" id="select_operacao">
-    <option value="1">Soma</option>
-    <option value="2">Subtração</option>
-    <option value="3">Divisão</option>
-    <option value="4">Multiplicação</option>
-  </select>
-
-  <input id="botao" type="button" value="Calcular">
-  <input id="botaoLimpar" type="button" value="Limpar">
+  <div class="container" style="margin:10px">
+    <select name="select_operacao" id="select_operacao">
+      <option value="1">Soma</option>
+      <option value="2">Subtração</option>
+      <option value="3">Divisão</option>
+      <option value="4">Multiplicação</option>
+      <option value="5">Potênciação</option>
+    </select>
+    <input id="botao" type="button" value="Calcular">
+    <input id="botaoLimpar" type="button" value="Limpar">
+  </div>
 
   <br><br>
   <label id="label" style="display: none;">Resultado</label>
@@ -56,6 +59,7 @@
         case '2' : resultado.value = `${primeiro_numero - segundo_numero}`; break;
         case '3' : resultado.value = `${primeiro_numero / segundo_numero}`; break;
         case '4' : resultado.value = `${primeiro_numero * segundo_numero}`; break;
+        case '5' : resultado.value = `${primeiro_numero ** segundo_numero}`; break;
         }
       }
 
@@ -88,10 +92,25 @@
       resultado2.style.display = 'none';
       label.style.display = 'none';
       }
+    function SinalOperacao()
+      {
+      let option = document.getElementById('select_operacao').value;
+      let enunciado = document.getElementById('enunciado2');
 
-      botao.addEventListener('click', RealizarCalculo);
-      botaoLimpar.addEventListener('click', LimparResultado);
-      botao.addEventListener('click', ParOuImpar);
+      switch (option)
+        {
+        case '1' : enunciado.innerText = '+';  break;
+        case '2' : enunciado.innerText = '-';  break;
+        case '3' : enunciado.innerText = '/';  break;
+        case '4' : enunciado.innerText = '*';  break;
+        case '5' : enunciado.innerText = '**'; break;
+        }
+      }
+
+    botao.addEventListener('click', RealizarCalculo);
+    botaoLimpar.addEventListener('click', LimparResultado);
+    botao.addEventListener('click', ParOuImpar);
+    document.getElementById('select_operacao').addEventListener('change', SinalOperacao);
   </script>
 </body>
 </html>
