@@ -5,8 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EX 06</title>
 </head>
-<body>
+<body style="display: flex; justify-content: center; background-color: dodgerblue; align-items: center; height: 100vh;">
+
+  <div style="background-color: aliceblue; width: 50%; text-align: center; height: 50vh; border-radius: 10px;">
+    <span id="periodo"></span>
+  </div>
+
   <script>
+  //-----------------------------------------------------
+  //função pra exibir data formatada
+    function fnc_data_atual()
+      {
+      let dataAtual = new Date();
+      let hora = `${dataAtual.getHours()}:`;
+      hora += `${dataAtual.getMinutes()}`;
+      return hora;
+      }
+  //-----------------------------------------------------
+  //função que define o periodo
+    function fnc_determina_periodo()
+      {
+      let DataAtual = new Date();
+      let hora = DataAtual.getHours();
+      let periodo = document.getElementById('periodo');
+      let fundo = document.body;
+      
+      if (hora < 12)
+        {
+          // alterar fundo
+        periodo.innerText = `Bom dia. Agora são: ${fnc_data_atual()} da manhã`;
+        }
+      else if (hora > 12 && hora < 18)
+        {
+          //alterar fundo
+        periodo.innerText = `Boa tarde. Agora são: ${fnc_data_atual()} da tarde.`;
+        }
+      else
+        {
+        fundo.style.backgroundColor = 'black'; // ver se é possível adicionar background images
+        periodo.innerText = `Boa noite. Agora são: ${fnc_data_atual()} da noite.`;
+        }
+      }
+     window.addEventListener('load', fnc_determina_periodo);
+    //-----------------------------------------------------
     
   </script>
   
