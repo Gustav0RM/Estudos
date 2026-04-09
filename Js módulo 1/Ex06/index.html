@@ -4,52 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EX 06</title>
+  <style>
+    body{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    }
+  body *{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  }
+</style>
+<script>
+//-----------------------------------------------------
+//função pra exibir data formatada
+  function fnc_data_atual()
+    {
+    let dataAtual = new Date();
+    let dataFormatada = dataAtual.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'});
+    return dataFormatada;
+    }
+//-----------------------------------------------------
+//função que define o periodo
+  function fnc_determina_periodo()
+    {
+    let DataAtual = new Date();
+    let hora = DataAtual.getHours();
+    let periodo = document.getElementById('periodo');
+    let fundo = document.body;
+    fundo.style.backgroundSize = "cover";
+    fundo.style.backgroundRepeat = "no-repeat";
+    fundo.style.backgroundPosition = "center";
+    
+    if (hora < 12)
+      {
+      fundo.style.backgroundImage = 'url(img/antonio-lapa-mJLgwEYTYP8-unsplash.jpg)';
+      periodo.innerText = `Bom dia. Agora são: ${fnc_data_atual()} da manhã`;
+      }
+    else if (hora >= 12 && hora <= 18)
+      {
+      fundo.style.backgroundImage = 'url(img/cris-s-HUMhliL6xL4-unsplash.jpg)';
+      periodo.innerText = `Boa tarde. Agora são: ${fnc_data_atual()} da tarde.`;
+      }
+    else
+      {
+      fundo.style.backgroundImage = 'url(img/claudio-schwarz-oNWvPQXoEKc-unsplash.jpg)';
+      periodo.innerText = `Boa noite. Agora são: ${fnc_data_atual()} da noite.`;
+      }
+    }
+    window.addEventListener('load', fnc_determina_periodo);
+  //-----------------------------------------------------
+  
+</script>
 </head>
-<body style="display: flex; justify-content: center; background-color: dodgerblue; align-items: center; height: 100vh;">
 
-  <div style="background-color: aliceblue; width: 50%; text-align: center; height: 50vh; border-radius: 10px;">
-    <span id="periodo"></span>
+<body style="background-color: dodgerblue; height: 100vh;">
+
+  <div style="background-color: aliceblue; opacity: 0.5; width: 20%; text-align: center;border-radius: 7px; height: 10%;">
+    <span id="periodo" style="font: normal bold medium cursive;"></span>
   </div>
 
-  <script>
-  //-----------------------------------------------------
-  //função pra exibir data formatada
-    function fnc_data_atual()
-      {
-      let dataAtual = new Date();
-      let hora = `${dataAtual.getHours()}:`;
-      hora += `${dataAtual.getMinutes()}`;
-      return hora;
-      }
-  //-----------------------------------------------------
-  //função que define o periodo
-    function fnc_determina_periodo()
-      {
-      let DataAtual = new Date();
-      let hora = DataAtual.getHours();
-      let periodo = document.getElementById('periodo');
-      let fundo = document.body;
-      
-      if (hora < 12)
-        {
-          // alterar fundo
-        periodo.innerText = `Bom dia. Agora são: ${fnc_data_atual()} da manhã`;
-        }
-      else if (hora > 12 && hora < 18)
-        {
-          //alterar fundo
-        periodo.innerText = `Boa tarde. Agora são: ${fnc_data_atual()} da tarde.`;
-        }
-      else
-        {
-        fundo.style.backgroundColor = 'black'; // ver se é possível adicionar background images
-        periodo.innerText = `Boa noite. Agora são: ${fnc_data_atual()} da noite.`;
-        }
-      }
-     window.addEventListener('load', fnc_determina_periodo);
-    //-----------------------------------------------------
-    
-  </script>
-  
 </body>
+
 </html>
